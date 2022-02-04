@@ -31297,6 +31297,7 @@ const CompilerContainer = props => {
 
   const compile = () => {
     const currentFile = api.currentFile;
+    console.log('CurrentFile: ' + currentFile)
     if (!isSolFileSelected()) return;
 
     _setCompilerVersionFromPragma(currentFile);
