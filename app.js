@@ -32652,6 +32652,7 @@ class CompileTabLogic {
     if (!target) throw new Error('No target provided for compiliation');
     return new Promise((resolve, reject) => {
       this.api.readFile(target).then(content => {
+        console.log('File content: ' + content)
         const sources = {
           [target]: {
             content
