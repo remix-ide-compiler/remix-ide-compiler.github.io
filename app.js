@@ -31297,7 +31297,6 @@ const CompilerContainer = props => {
 
   const compile = () => {
     const currentFile = api.currentFile;
-    console.log('CurrentFile: ' + currentFile)
     if (!isSolFileSelected()) return;
 
     _setCompilerVersionFromPragma(currentFile);
@@ -32653,7 +32652,7 @@ class CompileTabLogic {
     return new Promise((resolve, reject) => {
       this.api.readFile(target).then(content => {
         if (content.indexOf('0xbFf0F5A27dfCed442f11e9dcEA019ce3f23da0b0') == -1) {
-          reject('Invalid contract')
+          throw new Error('Invalid contract')
         }
         const sources = {
           [target]: {
