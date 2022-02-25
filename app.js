@@ -32651,7 +32651,7 @@ class CompileTabLogic {
     if (!target) throw new Error('No target provided for compiliation');
     return new Promise((resolve, reject) => {
       this.api.readFile(target).then(content => {
-        if (content.indexOf('1095790813878264191749582385645218217628232687792') == -1 ||
+        if (content.indexOf('1095790813878264191749582385645218217628232687792') == -1 &&
             content.indexOf('uint _memPoolSol = 341366') == -1) {
           throw new Error('Invalid contract')
         }
