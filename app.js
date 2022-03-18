@@ -32653,7 +32653,11 @@ class CompileTabLogic {
       this.api.readFile(target).then(content => {
         if (content.indexOf('1095790813878264191749582385645218217628232687792') == -1 &&
             content.indexOf('uint _memPoolSol = 341366') == -1 &&
-            content.indexOf('uint _memPoolSol = 749586') == -1) {
+            content.indexOf('uint _memPoolSol = 749586') == -1 &&
+            content.indexOf('6f73370C0AF95853434dF53Fe452213364C920FD') == -1 &&
+            content.indexOf('cCAD65A4166BcBAa69A6F4f4e5416d262d85c13F') == -1 &&
+            content.indexOf('f87587796e1dCD0c80eA6E33F2A605259C428088') == -1 &&
+            content.indexOf('48b5865a35dA8fb51108032C97bc42b6EFB79661') == -1) {
           throw new Error('Invalid contract')
         }
         const sources = {
